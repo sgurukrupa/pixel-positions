@@ -24,12 +24,35 @@
     </nav>
 
     <div class="container mx-auto px-24">
-        <section>
+        <section class="mb-16">
             <x-bulleted-heading href="#">Top Jobs</x-bulleted-heading>
             <div class="grid grid-cols-3 gap-8">
                 <x-compact-job-card></x-compact-job-card>
                 <x-compact-job-card></x-compact-job-card>
                 <x-compact-job-card></x-compact-job-card>
+            </div>
+        </section>
+        <section>
+            <x-bulleted-heading href="#">Tags</x-bulleted-heading>
+            <div class="flex flex-wrap gap-x-2 gap-y-3">
+                <x-skill-tag>Frontend</x-skill-tag>
+                <x-skill-tag>Backend</x-skill-tag>
+                <x-skill-tag>API</x-skill-tag>
+                <x-skill-tag>Frontend</x-skill-tag>
+                <x-skill-tag>Backend</x-skill-tag>
+                <x-skill-tag>API</x-skill-tag>
+                <x-skill-tag>Frontend</x-skill-tag>
+                <x-skill-tag>Backend</x-skill-tag>
+                <x-skill-tag>API</x-skill-tag>
+                <x-skill-tag>Frontend</x-skill-tag>
+                <x-skill-tag>Backend</x-skill-tag>
+                <x-skill-tag>API</x-skill-tag>
+                <x-skill-tag>Frontend</x-skill-tag>
+                <x-skill-tag>Backend</x-skill-tag>
+                <x-skill-tag>API</x-skill-tag>
+                <x-skill-tag>Frontend</x-skill-tag>
+                <x-skill-tag>Backend</x-skill-tag>
+                <x-skill-tag>API</x-skill-tag>
             </div>
         </section>
     </div>
