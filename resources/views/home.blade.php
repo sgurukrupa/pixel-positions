@@ -24,7 +24,13 @@
     </nav>
 
     <div class="container mx-auto px-24">
-        <section class="mb-16">
+        <section class="mt-16 text-center">
+            <h1 class="text-4xl font-bold text-white">Let's Find You A Great Job</h1>
+            <form action="">
+                <input type="text" class="mt-8 bg-white/5 rounded-md border border-white/10 p-2 w-full max-w-2xl">
+            </form>
+        </section>
+        <section class="mt-16">
             <x-bulleted-heading href="#">Top Jobs</x-bulleted-heading>
             <div class="grid grid-cols-3 gap-8">
                 <x-compact-job-card></x-compact-job-card>
@@ -32,7 +38,7 @@
                 <x-compact-job-card></x-compact-job-card>
             </div>
         </section>
-        <section>
+        <section class="mt-8">
             <x-bulleted-heading href="#">Tags</x-bulleted-heading>
             <div class="flex flex-wrap gap-x-2 gap-y-3">
                 <x-skill-tag>Frontend</x-skill-tag>
@@ -54,6 +60,10 @@
                 <x-skill-tag>Backend</x-skill-tag>
                 <x-skill-tag>API</x-skill-tag>
             </div>
+        </section>
+        <section class="mt-8">
+            <x-bulleted-heading href="#">Find Jobs</x-bulleted-heading>
+            <x-expanded-job-card></x-expanded-job-card>
         </section>
     </div>
 </body>
