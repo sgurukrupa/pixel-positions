@@ -23,7 +23,7 @@
         </div>
     </nav>
 
-    <div class="container mx-auto px-24">
+    <div class="container mx-auto px-36">
         <section class="mt-16 text-center">
             <h1 class="text-4xl font-bold text-white">Let's Find You A Great Job</h1>
             <form action="">
@@ -31,34 +31,21 @@
             </form>
         </section>
         <section class="mt-16">
-            <x-bulleted-heading href="#">Top Jobs</x-bulleted-heading>
+            <x-bulleted-heading href="#">Featured Jobs</x-bulleted-heading>
             <div class="grid grid-cols-3 gap-8">
-                <x-compact-job-card></x-compact-job-card>
-                <x-compact-job-card></x-compact-job-card>
-                <x-compact-job-card></x-compact-job-card>
+                @foreach ($employments as $employment)
+                    @if ($employment->featured)
+                        <x-compact-job-card :$employment></x-compact-job-card>
+                    @endif
+                @endforeach
             </div>
         </section>
         <section class="mt-8">
             <x-bulleted-heading href="#">Tags</x-bulleted-heading>
             <div class="flex flex-wrap gap-x-2 gap-y-3">
-                <x-skill-tag>Frontend</x-skill-tag>
-                <x-skill-tag>Backend</x-skill-tag>
-                <x-skill-tag>API</x-skill-tag>
-                <x-skill-tag>Frontend</x-skill-tag>
-                <x-skill-tag>Backend</x-skill-tag>
-                <x-skill-tag>API</x-skill-tag>
-                <x-skill-tag>Frontend</x-skill-tag>
-                <x-skill-tag>Backend</x-skill-tag>
-                <x-skill-tag>API</x-skill-tag>
-                <x-skill-tag>Frontend</x-skill-tag>
-                <x-skill-tag>Backend</x-skill-tag>
-                <x-skill-tag>API</x-skill-tag>
-                <x-skill-tag>Frontend</x-skill-tag>
-                <x-skill-tag>Backend</x-skill-tag>
-                <x-skill-tag>API</x-skill-tag>
-                <x-skill-tag>Frontend</x-skill-tag>
-                <x-skill-tag>Backend</x-skill-tag>
-                <x-skill-tag>API</x-skill-tag>
+                @foreach ($tags as $tag)
+                <x-skill-tag>{{ $tag->name }}</x-skill-tag>
+                @endforeach
             </div>
         </section>
         <section class="mt-8">

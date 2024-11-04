@@ -2,6 +2,7 @@
 
 use App\Models\Employer;
 use App\Models\Employment;
+use App\Models\Tag;
 
 // use function PHPUnit\Framework\assertTrue;
 
@@ -13,4 +14,10 @@ test('it belongs to an employer', function () {
 
     // assertTrue($employment->employer->is($employer));
     expect($employment->employer->is($employer))->toBeTrue();
+});
+
+test('it can have tags', function() {
+    $employment = Employment::factory()->create();
+    $employment->tags()->attach(Tag::factory()->create());
+    expect($employment->tags)->toHaveCount(1);
 });
