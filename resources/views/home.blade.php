@@ -63,7 +63,9 @@
         </section>
         <section class="mt-8">
             <x-bulleted-heading href="#">Find Jobs</x-bulleted-heading>
-            <x-expanded-job-card></x-expanded-job-card>
+            @foreach ($employments as $employment)
+            <x-expanded-job-card :$employment class="mt-8"></x-expanded-job-card>
+            @endforeach
         </section>
     </div>
 </body>
